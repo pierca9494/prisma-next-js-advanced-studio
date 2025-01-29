@@ -3,6 +3,8 @@ import SearchFilters from "@/components/search/SearchFilters";
 import { getProducts } from "@/lib/actions/product";
 import Pagination from "@/components/search/Pagination";
 
+export const revalidate = 5; // Cache this component for 1 second to reduce server load.
+
 export default async function Component({
   searchParams,
 }: {
